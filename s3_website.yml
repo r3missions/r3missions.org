@@ -1,0 +1,10 @@
+s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+s3_bucket: r3missions.org
+cloudfront_distribution_id: E3FIO4AR3VMF0T
+
+max_age:
+  "images/*": 3600
+  "*": 300
+
+gzip: true

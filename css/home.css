@@ -1,0 +1,49 @@
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  color: #334;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 300px;
+  margin: -150px 0 0 -200px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 5em;
+  font-weight: normal;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-animation: fadein 1.5s;
+  -moz-animation:    fadein 1.5s;
+  -o-animation:      fadein 1.5s;
+  animation:         fadein 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode:    forwards;
+  -o-animation-fill-mode:      forwards;
+  animation-fill-mode:         forwards;
+}
+html.ie9 .fadein {
+  opacity: 1;
+}
+.delay-1 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay:    1s;
+  -o-animation-delay:      1s;
+  animation-delay:         1s;
+}
+.delay-2 {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay:    2s;
+  -o-animation-delay:      2s;
+  animation-delay:         2s;
+}
+@-webkit-keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@-moz-keyframes    fadein { from { opacity: 0; } to { opacity: 1; } }
+@-o-keyframes      fadein { from { opacity: 0; } to { opacity: 1; } }
+@keyframes         fadein { from { opacity: 0; } to { opacity: 1; } }
