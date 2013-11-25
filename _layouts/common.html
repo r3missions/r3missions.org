@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="/css/{{ stylesheet }}.css">
 {% endfor %}
 
+{% if page.redirect %}
+  {% if page.redirect.seconds %}
+    <meta http-equiv="refresh" content="{{ page.redirect.seconds }}; url={{ page.redirect.target }}">
+  {% else %}
+    <meta http-equiv="refresh" content="0; url={{ page.redirect }}">
+  {% endif %}
+{% endif %}
+
     <script src="/js/vendor/modernizr-2.6.2.min.js"></script>
   </head>
 
