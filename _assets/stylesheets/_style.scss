@@ -754,8 +754,15 @@ p.quote {
 .page.multipage .copyright {
   text-align: center;
 }
-#team.page {
+#leadership.page {
   position:static;
+
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin-bottom: 1em;
+  }
 }
 /*======== TITLE SECTION ========*/
 

@@ -339,6 +339,10 @@ blockquote p {
   background: $primary-color;
   color: #ffffff;
   border: 1px solid transparent;
+
+  a {
+    color: $text-color;
+  }
 }
 .service-box .service-icon {
   width: 80px;
