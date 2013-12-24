@@ -29,9 +29,17 @@
 <![endif]-->
 </head>
 
-<body>
+<body class="onepage" data-spy="scroll" data-target=".navigation">
+
+<div id="load"></div>
+
+<div class="page-wrap">
 
 {{ content }}
+
+</div>
+
+<div id="back-to-top"><a href="#">Back to Top</a></div>
 
 {% javascript site %}
 {% include google-analytics.html %}
