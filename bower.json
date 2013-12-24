@@ -1,0 +1,9 @@
+{
+  "name": "r3-website",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "modernizr": "*"
+  }
+}

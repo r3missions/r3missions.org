@@ -1,1 +1,21 @@
 name: R3
+title: Redeeming. Rational. Radical.
+description: Redeeming. Rational. Radical.
+keywords: Redeeming, Rational, Radical, Missions, Adventist
+domain: r3missions.org
+
+markdown: redcarpet
+
+assets:
+  cache: true
+  js_compressor: uglifier
+  css_compressor: sass
+  gzip: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - bin
+  - vendor
+  - bower.json
+  - bower_components

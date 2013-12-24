@@ -1,1 +1,9 @@
 _site
+
+Gemfile.lock
+.bundle
+bin/
+vendor/ruby/
+bower_components/
+
+.jekyll-assets-cache
