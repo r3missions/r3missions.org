@@ -1,5 +1,4 @@
 //= require jquery-1.8.3
-//= require jquery.tweet
 //= require jquery.form
 //= require jquery.queryloader2
 //= require modernizr-2.6.2.min
