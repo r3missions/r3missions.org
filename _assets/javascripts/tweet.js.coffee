@@ -62,21 +62,19 @@ linkifyEntities = (tweet) ->
     [start, end] = indices
     indexMap[start] = [end, fn(tweet.text.substring(start, end))]
 
-  for entry in tweet.entities.urls
-    addToIndex entry.indices, (text) ->
+  linkifiers =
+    urls: (text) ->
       "<a href=\"#{escapeHTML(entry.expanded_url)}\" target=\"_blank\">#{escapeHTML(entry.display_url)}</a>"
-
-  for entry in tweet.entities.hashtags
-    addToIndex entry.indices, (text) ->
+    hashtags: (text) ->
       "<a href=\"http://twitter.com/search?q=#{escape("#"+entry.text)}\" target=\"_blank\">#{escapeHTML(text)}</a>"
-
-  for entry in tweet.entities.user_mentions
-    addToIndex entry.indices, (text) ->
+    user_mentions: (text) ->
       "<a title=\"#{escapeHTML(entry.name)}\" href=\"http://twitter.com/#{escapeHTML(entry.screen_name)}\" target=\"_blank\">#{escapeHTML(text)}</a>"
-
-  for entry in tweet.entities.media
-    addToIndex entry.indices, (text) ->
+    media: (text) ->
       "<a href=\"#{escapeHTML(entry.expanded_url)}\" target=\"_blank\">#{escapeHTML(entry.display_url)}</a>"
+
+  for key, fn of linkifiers when tweet.entities[key]
+    for entry in tweet.entities[key]
+      addToIndex entry.indices, fn
 
   result = ""
   starts = (parseInt(x) for x in Object.keys(indexMap)).sort((a,b) -> a-b)
