@@ -1546,6 +1546,9 @@ p.quote {
   width: 50%;
   float: left;
 }
+#contact-input label[for="email_confirm"], #contact-input input[id="email_confirm"] {
+  display: none;
+}
 #contact-input input {
   border: 1px solid #e8e8e8;
   width: 90%;

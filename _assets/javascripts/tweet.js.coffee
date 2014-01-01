@@ -5,9 +5,8 @@ if $feed.length
   $slider = $('<div class="flexslider">').append($list)
   $feed.append($slider)
 
-  host = if location.hostname.match(/\.dev$/) then 'r3-api.dev' else 'api.r3missions.org'
   $.ajax
-    url: "http://#{host}/twitter"
+    url: "http://#{API_HOST}/twitter"
     dataType: 'jsonp'
     cache: true
     success: (data) ->

@@ -839,22 +839,24 @@ sitemap: no
     <div class="sixteen columns">
       <div class="contact-box">
         <div id="contact-form">
-          <form action="#" method="post">
+          <form action="http://api.r3missions.org/contact_request" method="post">
             <div id="contact-input">
               <!--[if IE]><label for="name">Name</label><![endif]-->
-              <input type="text" name="contact[name]" id="name" placeholder="Name (required)" >
+              <input type="text" name="contact_request[name]" id="name" placeholder="Name (required)" >
               <!--[if IE]><label for="email">Email</label><![endif]-->
-              <input type="text" name="contact[email]" id="email" placeholder="Email (required)">
+              <input type="text" name="contact_request[email]" id="email" placeholder="Email (required)">
+              <!--[if IE]><label for="email_confirm">Leave blank</label><![endif]-->
+              <input type="text" name="contact_request[email_confirm]" id="email_confirm" placeholder="Leave blank">
               <!--[if IE]><label for="subject">Subject</label><![endif]-->
-              <input type="text" name="contact[subject]" id="subject" placeholder="Subject" >
+              <input type="text" name="contact_request[subject]" id="subject" placeholder="Subject" >
             </div>
             <div id="contact-textarea">
               <!--[if IE]><label for="message">Your Message Here</label><![endif]-->
-              <textarea name="contact[message]" id="message" cols="39" rows="4" placeholder="Your Message"></textarea>
+              <textarea name="contact_request[message]" id="message" cols="39" rows="4" placeholder="Your Message"></textarea>
             </div>
             <div id="contact-submit">
               <div>
-                <input name="submit" type="submit" id="submit" tabindex="5" value="Post Comment" class="comment-submit small button">
+                <input name="submit" type="submit" id="submit" tabindex="5" value="Post Contact Request" class="comment-submit small button">
               </div>
             </div>
           </form>

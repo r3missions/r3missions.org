@@ -20,6 +20,14 @@
 
 //= require_tree .
 
+var API_HOST;
+
+if (location.hostname.match(/\.dev$/)) {
+  API_HOST = 'r3-api.dev';
+} else {
+  API_HOST = 'api.r3missions.org';
+}
+
 jQuery(document).ready(function($){
 
 var height_video = $(window).width();
@@ -42,13 +50,6 @@ $('.video_slide').css("height",height_responsive);
 var   window_height = $(window).height(),
       testMobile,
     loadingError = '<p class="error">The Content cannot be loaded.</p>',
-    nameError = '<div class="alert-message error">Please enter your name.<span class="close" href="#">x</span></div>',
-    emailError = '<div class="alert-message error">Please enter your e-mail address.<span class="close" href="#">x</span></div>',
-    invalidEmailError = '<div class="alert-message error">Please enter a valid e-mail address.<span class="close" href="#">x</span></div>',
-    subjectError = '<div class="alert-message error">Please enter the subject.<span class="close" href="#">x</span></div>',
-    messageError = '<div class="alert-message error">Please enter your message.<span class="close" href="#">x</span></div>',
-    mailSuccess = '<div class="alert-message success">Your message has been sent. Thank you!<span class="close" href="#">x</span></div>',
-    mailResult = $('#contact .result'),
       current,
     next,
     prev,
@@ -324,54 +325,6 @@ function home_parallax() {
     };
 
 
-
-
-
-
-/*----------------------------------------------------*/
-// CONTACT FORM WIDGET
-/*----------------------------------------------------*/
-
-    $("#contact form").submit(function()
-    {
-        var form = $(this);
-        var formParams = form.serialize();
-        $.ajax(
-        {
-            url: 'contact.php',
-            type: 'POST',
-            traditional: true,
-            data: formParams,
-            success: function(data){
-                var response = jQuery.parseJSON(data);
-                if(response.success)
-                {   $('#contact form').slideUp().height('0');
-                    $('#contact .result').append(mailSuccess);
-                }
-                else
-                {
-           for(i=0; i<response.errors.length; i++){
-           if(response.errors[i].error == 'empty_name')  {
-             mailResult.append(nameError);
-           }
-           if(response.errors[i].error == 'empty_email')  {
-             mailResult.append(emailError);
-           }
-           if(response.errors[i].error == 'empty_subject')  {
-             mailResult.append(subjectError);
-           }
-           if(response.errors[i].error == 'empty_message')  {
-             mailResult.append(messageError);
-           }
-           if(response.errors[i].error == 'invalid'){
-            mailResult.append(invalidEmailError);
-           }
-           }
-                }
-            }
-        })
-        return false;
-    });
 
 
 
