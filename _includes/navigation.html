@@ -1,0 +1,28 @@
+<nav class="dark sticky-nav navigation">
+  <div class="ribbon-wrapper">
+    <div class="ribbon">
+      <a href="https://rally.org/r3missions/">Rally for R3 Missions</a>
+    </div>
+  </div>
+
+  <div class="container clearfix">
+    <div class="four columns">
+      <div class="logo small">
+        <a href="#home"><img src="{% asset_path logo.png %}" title="logo" alt="Logo"/></a>
+      </div>
+    </div>
+
+    <div class="twelve columns">
+      <ul class="main-menu small nav" id="nav">
+        {% capture path_prefix %}{% if page.url != '/new.html' %}/new.html{% endif %}{% endcapture %}
+        <li><a href="{{ path_prefix }}#home">Home</a></li>
+        <li><a href="{{ path_prefix }}#about">About</a></li>
+        <li><a href="{{ path_prefix }}#leadership">Leadership</a></li>
+        <li><a href="{{ path_prefix }}#projects">Projects</a></li>
+        <li><a href="{{ path_prefix }}#portfolio">Portfolio</a></li>
+        <li><a href="{{ path_prefix }}#contact">Contact</a></li>
+        <li><a href="https://rally.org/r3missions/" title="Rally for R3 Missions">Donate</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

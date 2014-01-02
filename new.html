@@ -19,33 +19,7 @@ sitemap: no
   </div>
 </div>
 
-<nav class="dark sticky-nav navigation">
-  <div class="ribbon-wrapper">
-    <div class="ribbon">
-      <a href="https://rally.org/r3missions/">Rally for R3 Missions</a>
-    </div>
-  </div>
-
-  <div class="container clearfix">
-    <div class="four columns">
-      <div class="logo small">
-        <a href="#home"><img src="{% asset_path logo.png %}" title="logo" alt="Logo"/></a>
-      </div>
-    </div>
-
-    <div class="twelve columns">
-      <ul class="main-menu small nav" id="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#leadership">Leadership</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://rally.org/r3missions/" title="Rally for R3 Missions">Donate</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% include navigation.html %}
 
 <div id="about" class="page">
   <div class="container">
@@ -866,17 +840,6 @@ sitemap: no
       </div>
     </div>
   </div>
-
-  <div class="copyright">
-    <div class="container clearfix">
-      <div class="sixteen columns">
-        <div class="copyright-logo"><a href="#"><img src="{% asset_path logo2.png %}" title="logo" alt="logo"/></a></div>
-        <div class="social-icons">
-          <div class="social-icon social-email"><a href="mailto:info@r3missions.org" target="_blank" data-original-title="Email">Email</a></div>
-          <div class="social-icon social-twitter"><a href="https://twitter.com/R3Missions" target="_blank" data-original-title="Twitter">Twitter</a></div>
-        </div>
-        <p>&copy; 2012 All Rights Reserved.</p>
-      </div>
-    </div>
-  </div>
 </div>
+
+{% include footer.html %}
