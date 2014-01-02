@@ -6,7 +6,25 @@ body_class: multipage
 
 <div class="page-wrap">
   <div class="page multipage">
-    {{ content }}
+    <div class="container">
+      <div class="row">
+        <div class="sixteen columns">
+          <div class="title">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="ajaxpage">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
   </div>
 </div>
 
