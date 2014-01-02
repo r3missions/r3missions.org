@@ -30,7 +30,7 @@
 <![endif]-->
 </head>
 
-<body class="onepage" data-spy="scroll" data-target=".navigation">
+<body class="{% if page.body_class %}{{ page.body_class }}{% else %}onepage{% endif %}" data-spy="scroll" data-target=".navigation">
 
 <div id="load"></div>
 

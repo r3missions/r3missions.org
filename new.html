@@ -529,7 +529,7 @@ sitemap: no
         </ul>
       </div>
       <div id="closeProject">
-        <a href="#loader"><i class="fa fa-remove"></i></a>
+        <a href="#loader"><i class="fa fa-times"></i></a>
       </div>
       <div id="loader"></div>
       <div id="ajax-content-outer">
@@ -543,240 +543,36 @@ sitemap: no
     <div id="filters" class="sixteen columns">
       <ul class="clearfix">
         <li><a href="#" data-filter="*" class="active"><h3>All</h3></a></li>
-        <li><a href="#" data-filter=".branding"><h3>Branding</h3></a></li>
-        <li><a href="#" data-filter=".design"><h3>Design</h3></a></li>
-        <li><a href="#" data-filter=".photography"><h3>Photography</h3></a></li>
+        <li><a href="#" data-filter=".concert"><h3>Concert</h3></a></li>
+        <li><a href="#" data-filter=".missions"><h3>Missions</h3></a></li>
+        <li><a href="#" data-filter=".music"><h3>Music</h3></a></li>
+        <li><a href="#" data-filter=".preaching"><h3>Preaching</h3></a></li>
         <li><a href="#" data-filter=".videography"><h3>Videography</h3></a></li>
-        <li><a href="#" data-filter=".web"><h3>Web</h3></a></li>
+        <li><a href="#" data-filter=".writing"><h3>Writing</h3></a></li>
       </ul>
     </div>
   </div>
 
   <div id="portfolio-wrap">
-    <div class="portfolio-item one-third column design videography photography web branding">
+{% for project in site.pages %}
+  {% if project.url contains "/projects/" %}
+    {% capture slug %}{{ project.url | remove: "/projects/" | remove: ".html" }}{% endcapture %}
+    <div class="portfolio-item one-third column {{ project.tags | join: ' ' | downcase }}">
       <div class="portfolio">
-        <a href="#!projects/project-1.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio1.jpg %}" alt="Portfolio 1"/>
+        <a href="#!projects/{{ slug }}.html" class="portfolio-image">
+          <img src="{{ slug | prepend: 'portfolio/' | append: '.jpg' | asset_path }}" alt="{{ project.title }}">
           <div class="portfolio-overlay">
             <div class="thumb-info">
-              <h3>Featured Image</h3>
-              <p class="portfolio-tags">Photography, Videography</p>
-              <i class="fa fa-picture"></i>
+              <h3>{{ project.title }}</h3>
+              <p class="portfolio-tags">{{ project.tags | join: ', ' }}</p>
+              <i class="fa fa-{{ project.icon }}"></i>
             </div>
           </div>
         </a>
       </div>
     </div>
-
-    <div class="portfolio-item one-third column branding videography web">
-      <div class="portfolio">
-        <a href="#!projects/project-2.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio2.jpg %}" alt="Portfolio 2"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Vimeo Video</h3>
-              <p class="portfolio-tags">Videography, Branding</p>
-              <i class="fa fa-film"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column branding photography web design">
-      <div class="portfolio">
-        <a href="#!projects/project-3.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio3.jpg %}" alt="Portfolio 3"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Gallery</h3>
-              <p class="portfolio-tags">Photography, Branding</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column branding photography web design">
-      <div class="portfolio">
-        <a href="#!projects/project-4.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio4.jpg %}" alt="Portfolio 4"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Another Gallery</h3>
-              <p class="portfolio-tags">Photography, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column branding videography">
-      <div class="portfolio">
-        <a href="#!projects/project-5.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio5.jpg %}" alt="Portfolio 5"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Vimeo Video</h3>
-              <p class="portfolio-tags">Videography, Design</p>
-              <i class="fa fa-film"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column videography web">
-      <div class="portfolio">
-        <a href="#!projects/project-6.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio6.jpg %}" alt="Portfolio 6"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Youtube Video</h3>
-              <p class="portfolio-tags">Videography, Web</p>
-              <i class="fa fa-film"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design videography photography">
-      <div class="portfolio">
-        <a href="#!projects/project-7.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio7.jpg %}" alt="Portfolio 7"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Youtube Video</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-8.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio8.jpg %}" alt="Portfolio 8"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Youtube Video</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-9.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio9.jpg %}" alt="Portfolio 9"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 9</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-10.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio10.jpg %}" alt="Portfolio 10"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 10</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding web">
-      <div class="portfolio">
-        <a href="#!projects/project-11.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio11.jpg %}" alt="Portfolio 11"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 11</h3>
-              <p class="portfolio-tags">Videography, Web</p>
-              <i class="fa fa-film"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  design videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-12.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio12.jpg %}" alt="Portfolio 12"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 12</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-13.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio13.jpg %}" alt="Portfolio 13"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 13</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-14.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio14.jpg %}" alt="Portfolio 14"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 14</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="portfolio-item one-third column  branding design videography photography web">
-      <div class="portfolio">
-        <a href="#!projects/project-15.html" class="portfolio-image">
-          <img src="{% asset_path portfolio/portfolio15.jpg %}" alt="Portfolio 15"/>
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>Portfolio 15</h3>
-              <p class="portfolio-tags">Design, Web</p>
-              <i class="fa fa-picture"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
+  {% endif %}
+{% endfor %}
   </div>
 </div>
 
