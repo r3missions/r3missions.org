@@ -556,13 +556,14 @@ layout: default
 {% for project in site.pages %}
   {% if project.url contains "/projects/" %}
     {% capture slug %}{{ project.url | remove: "/projects/" | remove: ".html" }}{% endcapture %}
+    {% capture title %}{% if project.short_title %}{{ project.short_title }}{% else %}{{ project.title }}{% endif %}{% endcapture %}
     <div class="portfolio-item one-third column {{ project.tags | join: ' ' | downcase }}">
       <div class="portfolio">
         <a href="#!projects/{{ slug }}.html" class="portfolio-image">
-          <img src="{{ slug | prepend: 'portfolio/' | append: '.jpg' | asset_path }}" alt="{{ project.title }}">
+          <img src="{{ slug | prepend: 'portfolio/' | append: '.jpg' | asset_path }}" alt="{{ title }}">
           <div class="portfolio-overlay">
             <div class="thumb-info">
-              <h3>{{ project.title }}</h3>
+              <h3>{{ title }}</h3>
               <p class="portfolio-tags">{{ project.tags | join: ', ' }}</p>
               <i class="fa fa-{{ project.icon }}"></i>
             </div>
