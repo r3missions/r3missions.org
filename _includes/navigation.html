@@ -14,7 +14,7 @@
 
     <div class="twelve columns">
       <ul class="main-menu small nav" id="nav">
-        {% capture path_prefix %}{% if page.url != '/new.html' %}/new.html{% endif %}{% endcapture %}
+        {% capture path_prefix %}{% if page.url != '/index.html' %}/{% endif %}{% endcapture %}
         <li><a href="{{ path_prefix }}#home">Home</a></li>
         <li><a href="{{ path_prefix }}#about">About</a></li>
         <li><a href="{{ path_prefix }}#leadership">Leadership</a></li>
