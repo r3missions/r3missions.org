@@ -1,3 +1,5 @@
+return if location.hostname is 'r3missions.org'
+
 $('.home-parallax, .parallax').click (e) ->
   return if e.target.tagName is 'A'
   e.preventDefault()
