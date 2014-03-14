@@ -750,8 +750,8 @@ $(window).load(function(){
       $('.flexslider').flexslider({
       animation: "slide",
       direction: "horizontal", 
-      slideshow: false,
-      slideshowSpeed: 3500,
+      slideshow: true,
+      slideshowSpeed: 10000,
       animationDuration: 500,
       directionNav: true,
       controlNav: false,
@@ -761,12 +761,11 @@ $(window).load(function(){
   $('.flexslider').flexslider({
       animation: "slide",
       direction: "horizontal", 
-      slideshow: false,
-      slideshowSpeed: 3500,
+      slideshow: true,
+      slideshowSpeed: 10000,
       animationDuration: 500,
       directionNav: true,
       controlNav: false
-
    });
 
 /* ------------------------------------------------------------------------ */
