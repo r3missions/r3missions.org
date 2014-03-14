@@ -528,7 +528,7 @@ nav.light .main-menu li.active a, nav.dark .main-menu li.active a {
   overflow:hidden;
 }
 .overlay {
-  background: image-url("pattern.png");
+  background-color: rgba(0,0,0,.33);
   width: 100%;
   position: absolute;
   overflow:hidden;
