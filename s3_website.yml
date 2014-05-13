@@ -12,3 +12,6 @@ max_age:
 gzip: true
 
 ignore_on_server: downloads
+
+redirects:
+  blog: blog/
