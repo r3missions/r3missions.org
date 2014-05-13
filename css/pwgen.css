@@ -1,0 +1,68 @@
+body {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 16px;
+  color: #334;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+main {
+  margin-top: 4em;
+  text-align: center;
+}
+
+footer {
+  margin-top: 2em;
+  border-top: 1px solid #eee;
+  padding-top: 2em;
+}
+
+#password {
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+}
+
+#random-warning {
+  display: none;
+  color: #d82323;
+}
+
+.btn {
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
