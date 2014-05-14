@@ -51,16 +51,16 @@ function sample(arr, n) {
   return samples;
 }
 
-function pwgen() {
-  var words = sample(wordlist, 4),
-      password = document.getElementById('password');
-  password.textContent = words.join('-');
+window.pwgen = function() { return sample(wordlist, 4).join('-'); };
+
+function updatePassword() {
+  document.getElementById('password').textContent = pwgen();
 }
 
-pwgen();
+updatePassword();
 
 document.getElementById('generate-password').addEventListener("click", function(e) {
-  pwgen();
+  updatePassword();
   e.preventDefault();
 }, false);
 
