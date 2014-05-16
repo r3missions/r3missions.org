@@ -18,7 +18,7 @@
 
 //= require_self
 
-//= require_tree .
+//= require_tree ./components
 
 var API_HOST;
 
