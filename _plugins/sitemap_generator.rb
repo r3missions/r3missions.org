@@ -46,7 +46,7 @@ module Jekyll
       entries = []
 
       site.pages.each do |page|
-        next if page.url =~ /\.(sass|scss|css)$/
+        next if page.url =~ /^\/projects|\.(sass|scss|css|html_)$/
         next if page.data['sitemap'] == false
 
         source_file = site.source + '/' + page.path
