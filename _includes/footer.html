@@ -2,12 +2,14 @@
   <div class="container clearfix">
     <div class="sixteen columns">
       <div class="copyright-logo"><a href="#"><img src="{% asset_path logo2.png %}" title="logo" alt="logo"/></a></div>
+      {% if false %}
       <div class="social-icons">
         <div class="social-icon social-email"><a href="mailto:info@r3missions.org" target="_blank" data-original-title="Email">Email</a></div>
         <div class="social-icon social-facebook"><a href="https://www.facebook.com/R3Missions" target="_blank" data-original-title="Facebook">Facebook</a></div>
         <div class="social-icon social-twitter"><a href="https://twitter.com/R3Missions" target="_blank" data-original-title="Twitter">Twitter</a></div>
         <div class="social-icon social-flickr"><a href="http://www.flickr.com/photos/r3missions" target="_blank" data-original-title="Flickr">Flickr</a></div>
       </div>
+      {% endif %}
       <p>&copy; {{ site.time | date: "%Y" }} All Rights Reserved.</p>
     </div>
   </div>
