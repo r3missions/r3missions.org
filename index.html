@@ -1,9 +1,700 @@
 ---
-layout: common
-stylesheets:
-- home
+layout: default
 ---
-<main>
-  <img id="logo" src="{% asset_path logo-512.png %}" title="logo" alt="logo"><br>
-  The website is being updated. We will return soon.
-</main>
+<div id="home" class="home-parallax">
+  <div class="home-text-wrapper">
+
+    <div class="home-logo-text">
+      <a href="#about">Welcome to R3</a>
+    </div>
+
+    <div id="home-slider" class="flexslider">
+      <ul class="slides styled-list">
+        <li class="home-slide"><p class="home-slide-content"><span class="highlight">Redeeming</span> through Christ</p></li>
+        <li class="home-slide"><p class="home-slide-content">We are <span class="highlight">Rational</span> missionaries</p></li>
+        <li class="home-slide"><p class="home-slide-content">Implementing <span class="highlight">Radical</span> ideas</p></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% include navigation.html %}
+
+<div id="about" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="sixteen columns">
+        <div class="title">
+          <h1>About R3</h1>
+          <div class="subtitle">
+            <p>R3 is an <span class="highlight">Adventist</span> mission <span class="highlight">think tank</span> that seeks to combine biblical <span class="highlight">innovative</span> approaches to spiritual awakening with traditional forms of <span class="highlight">evangelism</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fullwidth grey">
+    <div class="container">
+      <div class="fancy-header2">
+        <h4>What we do?</h4>
+        <h2 class="highlight">Create opportunities for adventist youth to be mobilized into meaningful action for Christ.</h2>
+      </div>
+
+      <div class="row">
+        <div class="one-third column">
+          <div class="service-features">
+            <div class="img-container">
+              <img src="{% asset_path icons/icons/world.png %}" alt="Service Features">
+            </div>
+            <h3>Missions</h3>
+            <p>Service projects tailored to specific mission fields that integrate teaching, healing, and gospel ministries that seek to mirror Christ's.</p>
+          </div>
+        </div>
+
+        <div class="one-third column">
+          <div class="service-features">
+            <div class="img-container">
+              <img src="{% asset_path icons/icons/video.png %}" alt="Service Features">
+            </div>
+            <h3>Media</h3>
+            <p>Capturing and promoting ministry in various media forms to reveal God's character and work in our present time.</p>
+          </div>
+        </div>
+
+        <div class="one-third column">
+          <div class="service-features">
+            <div class="img-container">
+              <img src="{% asset_path icons/icons/music.png %}" alt="Service Features">
+            </div>
+            <h3>Music</h3>
+            <p>Innovating ideas for how vocalists, instrumentalists, composers, and songwriters can utilize their Christ-given gifts for missions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="parallax1" class="parallax">
+  <div class="bg1 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="container clearfix">
+    <div class="parallax-content">
+
+      <p class="quote">
+        <i class="fa fa-quote-left"></i>
+        To love Him, the infinite, omniscient One, with the whole strength, and mind, and heart means the highest development of every power.
+        <i class="fa fa-quote-right"></i>
+      </p>
+      <div class="quote-author">— Ellen White —</div>
+
+    </div>
+  </div>
+</div>
+
+<div id="leadership" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="sixteen columns">
+        <div class="title">
+          <h1>Leadership</h1>
+          <div class="subtitle">
+            <p>Our culturally <span class="highlight">diverse</span> team are <span class="highlight">Young</span>, Experienced, and <span class="highlight">Passionate</span> about finishing God's work in this generation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fullwidth grey">
+    <div class="fancy-header2">
+      <h4>Who are we anyway?</h4>
+      <h2 class="highlight">Meet the team who built the dream</h2>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        {% if false %}
+        <div class="sixteen columns">
+          <div class="team-member">
+             <div class="team-thumb img-wrp">
+               <img src="{% asset_path team/team1.png %}" alt="team">
+                <div class="team-overlay">
+                  <div class="img-overlay"></div>
+                  <div class="overlay-content">
+                    <h4>Founder</h4>
+                    <p><a data-toggle="modal" href="#team-1" class="modal-popup-link view-profile">View Profile</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <h4>MIKE ROSS</h4>
+              </div>
+              <div id="team-1" class="modal hide fade.in animated fadeIn">
+                <div class="member-bio">
+                  <div class="container">
+                    <a href="#" class="close" data-dismiss="modal">×</a>
+                    <div class="member-role">
+                      <h1>MIKE ROSS</h1>
+                      <h4 class="highlight">Founder</h4>
+                    </div>
+                    <div class="row">
+                      <div class="seven columns">
+                        <img src="{% asset_path team/team1.png %}" alt="team">
+                        <div class="member-details">
+                          <div class="social-icons">
+                            <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
+                            <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
+                            <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                            <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
+                            <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="eight columns member-description">
+                      <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <h3>Mike's Standard Skills</h3>
+                      <div class="skillbar" data-perc="85">
+                        <div class="skill-title">Web Design 85%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="70">
+                        <div class="skill-title">UX Design 70%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="60">
+                        <div class="skill-title">Brand Packaging 60%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="90">
+                        <div class="skill-title">Wordpress 90%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <p>Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <p>Morbi suscipit interdum molestie. Aenean fringilla dui magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+             <div class="team-thumb img-wrp">
+               <img src="{% asset_path team/team2.png %}" alt="team">
+                <div class="team-overlay">
+                  <div class="img-overlay"></div>
+                  <div class="overlay-content">
+                    <h4>Founder</h4>
+                    <p><a data-toggle="modal" href="#team-2" class="modal-popup-link view-profile">View Profile</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <h4>MIKE ROSS</h4>
+              </div>
+              <div id="team-2" class="modal hide fade.in animated fadeIn">
+                <div class="member-bio">
+                  <div class="container">
+                    <a href="#" class="close" data-dismiss="modal">×</a>
+                    <div class="member-role">
+                      <h1>MIKE ROSS</h1>
+                      <h4 class="highlight">Founder</h4>
+                    </div>
+                    <div class="row">
+                      <div class="seven columns">
+                        <img src="{% asset_path team/team2.png %}" alt="team">
+                        <div class="member-details">
+                          <div class="social-icons">
+                            <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
+                            <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
+                            <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                            <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
+                            <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="eight columns member-description">
+                      <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <h3>Mike's Standard Skills</h3>
+                      <div class="skillbar" data-perc="85">
+                        <div class="skill-title">Web Design 85%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="70">
+                        <div class="skill-title">UX Design 70%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="60">
+                        <div class="skill-title">Brand Packaging 60%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="90">
+                        <div class="skill-title">Wordpress 90%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <p>Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <p>Morbi suscipit interdum molestie. Aenean fringilla dui magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-member">
+             <div class="team-thumb img-wrp">
+               <img src="{% asset_path team/team3.png %}" alt="team">
+                <div class="team-overlay">
+                  <div class="img-overlay"></div>
+                  <div class="overlay-content">
+                    <h4>Founder</h4>
+                    <p><a data-toggle="modal" href="#team-3" class="modal-popup-link view-profile">View Profile</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="team-desc">
+                <h4>MIKE ROSS</h4>
+              </div>
+              <div id="team-3" class="modal hide fade.in animated fadeIn">
+                <div class="member-bio">
+                  <div class="container">
+                    <a href="#" class="close" data-dismiss="modal">×</a>
+                    <div class="member-role">
+                      <h1>MIKE ROSS</h1>
+                      <h4 class="highlight">Founder</h4>
+                    </div>
+                    <div class="row">
+                      <div class="seven columns">
+                        <img src="{% asset_path team/team3.png %}" alt="team">
+                        <div class="member-details">
+                          <div class="social-icons">
+                            <div class="social-icon social-email"><a href="mailto:hallo@example.com" target="_blank" data-original-title="Email">Email</a></div>
+                            <div class="social-icon social-behance"><a href="#" target="_blank" data-original-title="Behance">Behance</a></div>
+                            <div class="social-icon social-facebook"><a href="#" target="_blank" data-original-title="Facebook">Facebook</a></div>
+                            <div class="social-icon social-flickr"><a href="#" target="_blank" data-original-title="Flickr">Flickr</a></div>
+                            <div class="social-icon social-forrst"><a href="#" target="_blank" data-original-title="Forrst">Forrst</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="eight columns member-description">
+                      <p class="lead">Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <h3>Mike's Standard Skills</h3>
+                      <div class="skillbar" data-perc="85">
+                        <div class="skill-title">Web Design 85%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="70">
+                        <div class="skill-title">UX Design 70%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="60">
+                        <div class="skill-title">Brand Packaging 60%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <div class="skillbar" data-perc="90">
+                        <div class="skill-title">Wordpress 90%</div>
+                        <div class="skill-percentage"></div>
+                      </div>
+                      <p>Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros.</p>
+                      <p>Morbi suscipit interdum molestie. Aenean fringilla dui magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat hendrerit dictum. Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        <div class="one-third column">
+          <dl>
+            <dt>Sebastien Braxton</dt>
+            <dd>Co-Founder</dd>
+            <dt>Katie Surbaugh</dt>
+            <dd>Co-Founder</dd>
+            <dt>Zippora Anson</dt>
+            <dd>Vice-Chair</dd>
+          </dl>
+        </div>
+        <div class="one-third column">
+          <dl>
+            <dt>Callie Williams</dt>
+            <dd>Missions Director</dd>
+            <dt>Clive Coutet</dt>
+            <dd>Media Director</dd>
+            <dt>Candis Braxton</dt>
+            <dd>Music Director</dd>
+          </dl>
+        </div>
+        <div class="one-third column">
+          <dl>
+            <dt>László Bácsi</dt>
+            <dd>Technology Director</dd>
+            <dt>Jonathan Walter</dt>
+            <dd>Special Projects</dd>
+            <dt>Charlene Coutet</dt>
+            <dd>Special Projects</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if false %}
+  <div class="container clearfix">
+    <div class="sixteen columns">
+      <h3>Here's few Famous clients we've worked with so far</h3>
+      <div class="client-logos">
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client6.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client7.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client8.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client1.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client2.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client3.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client4.png %}" alt="Clients"></a>
+        <a href="#" title="Featured Clients" class="clients"><img src="{% asset_path clients/client5.png %}" alt="Clients"></a>
+      </div>
+      <p>Sed ligula magna, porta in scelerisque ac, gravida fringilla sapien. Sed tempus urna in sem ultricies vehicula vulputate purus ultrices. Aenean orci libero, scelerisque non feugiat gravida, dignissim ut tortor. Phasellus et nulla eros. Morbi suscipit interdum molestie. Aenean fringilla dui magna.</p>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div id="parallax2" class="parallax">
+  <div class="bg2 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="container clearfix">
+    <div class="parallax-content">
+
+      <div>
+        <p class="twitter-feed-icon"><i class="fa fa-twitter"></i></p>
+        <p class="twitter-author"><a href="http://twitter.com/R3Missions" target="_blank">@R3Missions</a></p>
+      </div>
+      <div class="twitter-slider">
+        <div id="twitter-feed"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="projects" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="sixteen columns">
+        <div class="title">
+          <h1>Projects</h1>
+          <div class="subtitle">
+            <p>Our projects seek to be creative, <span class="highlight">fresh</span>, bold and <span class="highlight">biblical</span>, but always thought through carefully, prayerfully, <span class="highlight">collaboratively</span> and executed with patience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fullwidth grey">
+    <div class="container clearfix">
+      <div class="row">
+
+        <div class="one-third column">
+          <div class="service-box">
+            <div>
+              <h3>Missions</h3>
+              <i class="service-icon fa fa-globe"></i>
+            </div>
+            <div class="service-description">
+              <p>
+                R3 is collaborating with Spicer Memorial College, Pune
+                Adventist Hospital, Moore SDA Church and more to plan
+                3 missions in 2014.
+              </p>
+            </div>
+            <h6>What we offer</h6>
+            <ul class="styled-list">
+              <li><a href="http://rally.org/r3missions/" title="Rally for R3 Missions">Fundraising</a></li>
+              <li><a href="https://vimeo.com/84316660" target="_blank">Pune, India: January 7–21</a></li>
+              <li><a href="https://www.youtube.com/watch?v=tyPICdoPrYI&list=PLQspd2EJg9LVrvLrpyemPKWz3S3CamnIm">Oklahoma: April 27–June 28</a></li>
+              <li>Dubai: October 15–December 13</li>
+              <li><a href="/your-own-mission.html">Your Own Mission</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="one-third column">
+          <div class="service-box">
+            <div>
+              <h3>Media</h3>
+              <i class="service-icon fa fa-video-camera"></i>
+            </div>
+            <div class="service-description">
+              <p>
+                R3 is exploring traditional, photo, and video journaling
+                of mission experiences across the globe along-side an
+                online training platform and national geographic-esque
+                mission magazine.
+              </p>
+            </div>
+            <h6>What we offer</h6>
+            <ul class="styled-list">
+              <li><a href="https://www.youtube.com/watch?v=X7aupFjM4kQ" target="_blank">Media Journaling Project</a></li>
+              <li>Application Development</li>
+              <li>Mission Photo Journalism</li>
+              <li>Mission Video Journalism</li>
+              <li>Mission Graphic Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="one-third column">
+          <div class="service-box">
+            <div>
+              <h3>Music</h3>
+              <i class="service-icon fa fa-music"></i>
+            </div>
+            <div class="service-description">
+              <p>
+                R3 endeavors to create resources, opportunities, and
+                networks of musicianaries across the globe in order to
+                sound the note of God's love through the heavenly gift
+                of music.
+              </p>
+            </div>
+            <h6>What we offer</h6>
+            <ul class="styled-list">
+              <li><a href="http://r3missions.org/downloads/hor_concert_gyc_program.pdf" title="History of Redemption Concert Program" target="_blank">GYC Orlando Concert</a></li>
+              <li>Music on a Mission</li>
+              <li>Adventist Recording Studio</li>
+              <li>Musicianary Network</li>
+              <li><a href="mailto:music@r3missions.org">Host an R3 Concert</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container clearfix">
+    <div class="sixteen columns">
+      <h3>Are You Ready to Serve?</h3>
+      <a href="#contact" class="button scroll-to">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<div id="parallax3" class="parallax">
+  <div class="bg3 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="container clearfix">
+    <div class="parallax-content">
+
+      <p class="testimonial-icon"><i class="fa fa-quote-left"></i></p>
+      <h3 class="title"><span>Our Testimonials</span></h3>
+      <div class="testimonial-slider">
+        <div class="flexslider">
+
+          <ul class="slides styled-list">
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                R3 does a lot of the things that I only dream about
+                doing in the future. However, it caused my secret fear
+                that my colleagues will finish the work before I even
+                get on the field.
+              </p>
+              <div class="client-info">Joneen Wilson</div>
+            </li>
+
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                It is unreal the amount of people who are impressed by
+                the mission statement of R3 and want to be a part of
+                that. It's making me so excited for the future.
+              </p>
+              <div class="client-info">Allie Ogilvie</div>
+            </li>
+
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                R3 has that Christ-focus. Rational, we weren’t trying to catch
+                people and bring them in by emotion. It was practical, answering
+                people’s questions. Radical, it was still something with young
+                people leading it, and it was amazing.
+              </p>
+              <div class="client-info">Ashley Bloom</div>
+            </li>
+
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                R3 really utilizes the Biblical model that Christ left in
+                Matthew—teaching, preaching, and healing—and that perfect
+                synergy together, to meet the needs of the people and to impart
+                those spiritual blessings that would allow them to grow into a
+                loving relationship with Christ, to prepare them to meet Him
+                face to face.
+              </p>
+              <div class="client-info">Joanne Cross</div>
+            </li>
+
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                R3 is a really great opportunity for young people to experience
+                Christ firsthand in the mission field, away from their own
+                comfort zone. It’s an accessible and practical way for people
+                to experience Jesus, to share Jesus.
+              </p>
+              <div class="client-info">Jennifer Zambales</div>
+            </li>
+
+            <li class="testimonial-slide">
+              <p class="client-testimonial">
+                My favorite part was seeing the children taking the Bibles and
+                reading them. To think of what effect that may have in years to
+                come, the possibilities are just endless.
+              </p>
+              <div class="client-info">Joanne Cross</div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="portfolio" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="sixteen columns">
+        <div class="title">
+          <h1>Our Featured Portfolio</h1>
+          <div class="subtitle">
+            <p>If you like what we have done, hire us or join us as we link the <span class="highlight">professions</span>, training, and <span class="highlight">talents</span> of Adventists with radical <span class="highlight">service</span> for Christ.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ajax-section">
+    <div class="container clearfix">
+      <div id="project-navigation">
+        <ul>
+          <li id="nextProject"><a href="#"></a></li>
+          <li id="prevProject"><a href="#"></a></li>
+        </ul>
+      </div>
+      <div id="closeProject">
+        <a href="#loader"><i class="fa fa-times"></i></a>
+      </div>
+      <div id="loader"></div>
+      <div id="ajax-content-outer">
+        <div id="ajax-content-inner"></div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  <div class="container clearfix">
+    <div id="filters" class="sixteen columns">
+      <ul class="clearfix">
+        <li><a href="#" data-filter="*" class="active"><h3>All</h3></a></li>
+        <li><a href="#" data-filter=".concert"><h3>Concert</h3></a></li>
+        <li><a href="#" data-filter=".mission"><h3>Mission</h3></a></li>
+        <li><a href="#" data-filter=".music"><h3>Music</h3></a></li>
+        <li><a href="#" data-filter=".preaching"><h3>Preaching</h3></a></li>
+        <li><a href="#" data-filter=".videography"><h3>Videography</h3></a></li>
+        <li><a href="#" data-filter=".writing"><h3>Writing</h3></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="portfolio-wrap">
+{% for project in site.pages %}
+  {% if project.url contains "/projects/" %}
+    {% capture slug %}{{ project.url | remove: "/projects/" | remove: ".html" }}{% endcapture %}
+    {% capture title %}{% if project.short_title %}{{ project.short_title }}{% else %}{{ project.title }}{% endif %}{% endcapture %}
+    <div class="portfolio-item one-third column {{ project.tags | join: ' ' | downcase }}">
+      <div class="portfolio">
+        <a href="#!projects/{{ slug }}.html" class="portfolio-image">
+          <img src="{{ slug | prepend: 'portfolio/' | append: '.jpg' | asset_path }}" alt="{{ title }}">
+          <div class="portfolio-overlay">
+            <div class="thumb-info">
+              <h3>{{ title }}</h3>
+              <p class="portfolio-tags">{{ project.tags | join: ', ' }}</p>
+              <i class="fa fa-{{ project.icon }}"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+  </div>
+</div>
+
+<div id="parallax4" class="parallax">
+  <div class="bg4 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="container clearfix">
+    <div class="parallax-content">
+
+      <div class="contact-details">
+        <h1>info@r3missions.org</h1>
+        <h2>PO BOX 130320, Ann Arbor, MI, 48113 USA</h2>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="sixteen columns">
+        <div class="title">
+          <h1>Contact Us</h1>
+          <div class="subtitle">
+            <p>If you're thirsting for <span class="highlight">mission</span> and <span class="highlight">opportunities</span> to serve alongside a global <span class="highlight">community</span> of youth, we'd love to <span class="highlight">partner</span> with you in service.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container clearfix">
+    <div class="sixteen columns">
+      <div class="contact-box">
+        <div id="contact-form">
+          <form action="http://api.r3missions.org/contact_request" method="post">
+            <div id="contact-input">
+              <!--[if IE]><label for="name">Name</label><![endif]-->
+              <input type="text" name="contact_request[name]" id="name" placeholder="Name (required)" >
+              <!--[if IE]><label for="email">Email</label><![endif]-->
+              <input type="text" name="contact_request[email]" id="email" placeholder="Email (required)">
+              <!--[if IE]><label for="email_confirm">Leave blank</label><![endif]-->
+              <input type="text" name="contact_request[email_confirm]" id="email_confirm" placeholder="Leave blank">
+              <!--[if IE]><label for="subject">Subject</label><![endif]-->
+              <input type="text" name="contact_request[subject]" id="subject" placeholder="Subject" >
+            </div>
+            <div id="contact-textarea">
+              <!--[if IE]><label for="message">Your Message Here</label><![endif]-->
+              <textarea name="contact_request[message]" id="message" cols="39" rows="4" placeholder="Your Message"></textarea>
+            </div>
+            <div id="contact-submit">
+              <div>
+                <input name="submit" type="submit" id="submit" tabindex="5" value="Post Contact Request" class="comment-submit small button">
+              </div>
+            </div>
+          </form>
+          <div class="clear"></div>
+        </div>
+        <div class="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include footer.html %}
