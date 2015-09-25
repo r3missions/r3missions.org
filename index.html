@@ -530,96 +530,6 @@ layout: default
   </div>
 </div>
 
-<div id="portfolio" class="page">
-  <div class="container">
-    <div class="row">
-      <div class="sixteen columns">
-        <div class="title">
-          <h1>Our Featured Portfolio</h1>
-          <div class="subtitle">
-            <p>
-              If you like what we have done, hire us or join us as we
-              link the <span class="highlight">professions</span>,
-              training, and <span class="highlight">talents</span> of
-              Youth with radical <span class="highlight">service</span>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="ajax-section">
-    <div class="container clearfix">
-      <div id="project-navigation">
-        <ul>
-          <li id="nextProject"><a href="#"></a></li>
-          <li id="prevProject"><a href="#"></a></li>
-        </ul>
-      </div>
-      <div id="closeProject">
-        <a href="#loader"><i class="fa fa-times"></i></a>
-      </div>
-      <div id="loader"></div>
-      <div id="ajax-content-outer">
-        <div id="ajax-content-inner"></div>
-      </div>
-    </div>
-  </div>
-  <div class="clear"></div>
-
-  <div class="container clearfix">
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a href="#" data-filter="*" class="active"><h3>All</h3></a></li>
-        <li><a href="#" data-filter=".service"><h3>Service</h3></a></li>
-        <li><a href="#" data-filter=".music"><h3>Music</h3></a></li>
-        <li><a href="#" data-filter=".speaking"><h3>Speaking</h3></a></li>
-        <li><a href="#" data-filter=".videography"><h3>Videography</h3></a></li>
-        <li><a href="#" data-filter=".writing"><h3>Writing</h3></a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div id="portfolio-wrap">
-{% for project in site.pages %}
-  {% if project.url contains "/projects/" %}
-    {% capture slug %}{{ project.url | remove: "/projects/" | remove: ".html" }}{% endcapture %}
-    {% capture title %}{% if project.short_title %}{{ project.short_title }}{% else %}{{ project.title }}{% endif %}{% endcapture %}
-    <div class="portfolio-item one-third column {{ project.tags | join: ' ' | downcase }}">
-      <div class="portfolio">
-        <a href="#!projects/{{ slug }}.html" class="portfolio-image">
-          <img src="{{ slug | prepend: 'portfolio/' | append: '.jpg' | asset_path }}" alt="{{ title }}">
-          <div class="portfolio-overlay">
-            <div class="thumb-info">
-              <h3>{{ title }}</h3>
-              <p class="portfolio-tags">{{ project.tags | join: ', ' }}</p>
-              <i class="fa fa-{{ project.icon }}"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  {% endif %}
-{% endfor %}
-  </div>
-</div>
-
-<div id="parallax4" class="parallax">
-  <div class="bg4 parallax-bg"></div>
-  <div class="overlay"></div>
-  <div class="container clearfix">
-    <div class="parallax-content">
-
-      <div class="contact-details">
-        <h1>info@r3missions.org</h1>
-        <h2>PO BOX 130320, Ann Arbor, MI, 48113 USA</h2>
-      </div>
-
-    </div>
-  </div>
-</div>
-
 <div id="contact" class="page">
   <div class="container">
     <div class="row">
@@ -663,6 +573,21 @@ layout: default
         </div>
         <div class="result"></div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div id="parallax4" class="parallax">
+  <div class="bg4 parallax-bg"></div>
+  <div class="overlay"></div>
+  <div class="container clearfix">
+    <div class="parallax-content">
+
+      <div class="contact-details">
+        <h1>info@r3missions.org</h1>
+        <h2>PO BOX 130320, Ann Arbor, MI, 48113 USA</h2>
+      </div>
+
     </div>
   </div>
 </div>
