@@ -1,4 +1,4 @@
-return if location.hostname is 'r3missions.org'
+return if location.hostname in ['r3missions.org', 'www.r3missions.org']
 
 $('.home-parallax, .parallax').click (e) ->
   return if e.target.tagName is 'A'
