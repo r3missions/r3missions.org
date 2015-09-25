@@ -11,4 +11,18 @@
 @import "shortcodes";
 @import "media";
 
-@import "ribbon";
+.main-menu {
+  form {
+    display: inline;
+  }
+
+  .button {
+    padding: 0 0.5em;
+    height: 30px;
+    line-height: 30px !important;
+    font-family: 'BebasNeueRegular', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}

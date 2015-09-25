@@ -1,10 +1,4 @@
 <nav class="dark sticky-nav navigation">
-  <div class="ribbon-wrapper">
-    <div class="ribbon">
-      <a href="https://rally.org/r3missions/">Rally for R3</a>
-    </div>
-  </div>
-
   <div class="container clearfix">
     <div class="four columns">
       <div class="logo small">
@@ -20,7 +14,14 @@
         <li><a href="{{ path_prefix }}#leadership">Leadership</a></li>
         <li><a href="{{ path_prefix }}#projects">Projects</a></li>
         <li><a href="{{ path_prefix }}#contact">Contact</a></li>
-        <li><a href="https://rally.org/r3missions/" title="Rally for R3">Donate</a></li>
+        <li>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="CQ77GLHWMYJ9Q">
+            <input type="submit" name="submit" class="button" value="Donate">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+        </li>
       </ul>
     </div>
   </div>
